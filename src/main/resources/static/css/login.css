@@ -1,0 +1,365 @@
+/* Base Styling */
+
+html, body {
+    height: 100%; /* Ensure the body and html cover the entire page */
+    margin: 0;
+    padding: 0;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    padding: 20px;
+    min-height: 100vh; /* Ensure the container takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.custom-navbar h2 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Stat Boxes */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Containers */
+.chart-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Chart Toggle Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Expense Container */
+.expense-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Expense Card */
+.expense-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.expense-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Header inside each card */
+.expense-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.expense-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.expense-category {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    background-color: #4facfe;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Expense Details */
+.expense-details p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.expense-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.expense-actions .btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #00c853;
+}
+
+.edit-btn:hover {
+    background-color: #00b248;
+}
+
+.delete-btn {
+    background-color: #d50000;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .custom-navbar h2 {
+        font-size: 1.3rem;
+    }
+
+    .dashboard-title {
+        font-size: 1.4rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 90%;
+    }
+
+    .chart-container {
+        padding: 10px;
+    }
+
+    /* Expense Container */
+    .expense-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Expense Card */
+    .expense-card {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .expense-card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Header inside each card */
+    .expense-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .expense-header h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .expense-category {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+        background-color: #4facfe;
+        color: white;
+        border-radius: 5px;
+    }
+
+    /* Expense Details */
+    .expense-details p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .expense-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .expense-actions .btn {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .edit-btn {
+        background-color: #00c853;
+    }
+
+    .edit-btn:hover {
+        background-color: #00b248;
+    }
+
+    .delete-btn {
+        background-color: #d50000;
+    }
+
+    .delete-btn:hover {
+        background-color: #b71c1c;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .expense-card {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .expense-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .expense-actions {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .expense-actions .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+	
+	
+}
