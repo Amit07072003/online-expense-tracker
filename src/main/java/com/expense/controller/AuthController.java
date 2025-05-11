@@ -19,8 +19,12 @@ public class AuthController {
     public String showLoginPage() {
         return "login";
     }
+     @GetMapping("/")
+    public String showLoginPage1() {
+        return "login";
+    }
 
-    @PostMapping("/")
+    @PostMapping("/login")
     public String login(@RequestParam String email,
                         @RequestParam String password,
                         HttpSession session,
