@@ -9,9 +9,8 @@
             <div class="col-md-6 mx-auto">
                 <div class="card-sh text-center">
 
-                    <!-- Optional Logo -->
-                    <img src="${pageContext.request.contextPath}/img/logo.png" class="mb-3" style="max-height: 60px;" alt="Expense Tracker Logo">
-
+                   	<img src="https://freepngimg.com/thumb/money/70851-currency-money-payment-bag-free-transparent-image-hq.png"
+					     class="mb-3" style="max-height: 60px;" alt="Expense Tracker Logo">
                     <h3 class="mb-3">Login</h3>
 
                     <!-- Flash Message for Errors -->
