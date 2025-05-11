@@ -20,7 +20,7 @@ public class AuthController {
         return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/")
     public String login(@RequestParam String email,
                         @RequestParam String password,
                         HttpSession session,
