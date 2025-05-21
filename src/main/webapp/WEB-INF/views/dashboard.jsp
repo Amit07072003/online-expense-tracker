@@ -2,6 +2,76 @@
 <link rel="stylesheet" href="/css/login.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<style>
+    body {
+        background-color: #ccd;
+        font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .dashboard-title {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        padding: 20px;
+        background-color: #000;
+        color: white;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .stat-box {
+        background: url('/images/fade.gif');
+        border: 2px solid #99c;
+        padding: 15px;
+        background-color: #fff;
+        min-width: 200px;
+        text-align: center;
+        font-size: 1.1em;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-group {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .btn {
+        font-weight: bold;
+        background-color: #99c;
+        color: #000;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .chart-container {
+        width: 80%;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #99c;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        text-align: center;
+        color: #000;
+        margin-bottom: 20px;
+    }
+</style>
 
 <!-- Prepare Chart Data with JSTL -->
 <script>
@@ -13,7 +83,7 @@
     </c:forEach>
 </script>
 
-<div >
+<div>
     <h2 class="dashboard-title">Welcome, ${sessionScope.loggedInUser.username}</h2>
 
     <!-- Stats Section -->
@@ -31,8 +101,8 @@
 
     <!-- Toggle Buttons -->
     <div class="button-group">
-        <button class="btn btn-info" onclick="showChart('overview')">Overview</button>
-        <button class="btn btn-info" onclick="showChart('category')">By Category</button>
+        <button class="btn" onclick="showChart('overview')">Overview</button>
+        <button class="btn" onclick="showChart('category')">By Category</button>
     </div>
 
     <!-- Charts -->
