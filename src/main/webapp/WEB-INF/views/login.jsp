@@ -1,6 +1,5 @@
 <%@ include file="header.jsp" %>
-<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/logins/login-4/assets/css/login-4.css">
+
 <link rel="stylesheet" href="/css/login.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
