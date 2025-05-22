@@ -23,6 +23,13 @@ public class AuthController {
         return "login";
     }
 
+     @GetMapping("/favicon.ico")
+    public void favicon() {
+        // This method can be empty to avoid 404 for favicon requests
+        // Or you can serve a favicon file if you have one
+         return "login";
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam String email,
                         @RequestParam String password,
