@@ -19,6 +19,18 @@ public class DashboardController {
     @Autowired
     private ExpenseService expenseService;
 
+     @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+     @GetMapping("/favicon.ico")
+    public String favicon() {
+        // This method can be empty to avoid 404 for favicon requests
+        // Or you can serve a favicon file if you have one
+         return "login";
+    }
+
     @GetMapping("/dashboard")
     public String showDashboard(Model model, HttpSession session) {
         // Get the logged-in user
