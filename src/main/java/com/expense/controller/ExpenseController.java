@@ -24,7 +24,17 @@ public class ExpenseController {
         model.addAttribute("expense", new Expense());
         return "add-expense";
     }
+ @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
 
+     @GetMapping("/favicon.ico")
+    public String favicon() {
+        // This method can be empty to avoid 404 for favicon requests
+        // Or you can serve a favicon file if you have one
+         return "login";
+    }
     @PostMapping("/save-expense")
     public String saveExpense(@ModelAttribute Expense expense, HttpSession session) {
         User user = (User) session.getAttribute("loggedInUser");
