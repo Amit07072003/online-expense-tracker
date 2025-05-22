@@ -16,7 +16,7 @@
     <div class="card border-light-subtle shadow-sm">
       <div class="row g-0">
         <div class="col-12 col-md-6">
-          <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="https://freepngimg.com/thumb/money/70851-currency-money-payment-bag-free-transparent-image-hq.png">
+         
         </div>
         <div class="col-12 col-md-6">
           <div class="card-body p-3 p-md-4 p-xl-5">
