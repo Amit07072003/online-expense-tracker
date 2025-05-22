@@ -24,10 +24,10 @@ public class AuthController {
     }
 
      @GetMapping("/favicon.ico")
-    public String favicon() {
+    public void favicon() {
         // This method can be empty to avoid 404 for favicon requests
         // Or you can serve a favicon file if you have one
-         return "login";
+        
     }
 
     @PostMapping("/login")
